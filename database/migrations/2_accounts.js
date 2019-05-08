@@ -12,6 +12,9 @@ exports.up = knex =>
     table.string("apn").notNullable();
     table.string("status").notNullable();
     table.string("resetURL").notNullable();
+    table.string("createdAt").notNullable();
+    table.string("proxyServerID").notNullable(); //this will be the primary(uuid)
+
     table.timestamps(true, true);
   });
 
