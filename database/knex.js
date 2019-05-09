@@ -9,4 +9,8 @@ const retrieveUserProxies = ({ id }) => {
     .where({ user_id: id });
 };
 
-module.exports = { retrieveUserProxies };
+const adminGrab = () => {
+  return knex("accounts").select("*");
+};
+
+module.exports = { retrieveUserProxies, adminGrab };

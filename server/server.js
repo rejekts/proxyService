@@ -11,10 +11,12 @@ app.use(
     strict: false
   })
 );
-
+app.get("/adminDemands", (req, res) => {
+  console.log("grab em all so the bosses can see");
+});
 app.get("/getAll/:id", (req, res) => {
   console.log(req.params, "hitting endpoint");
-  db.retrieveProxies(req.params)
+  db.retrieveUserProxies(req.params)
     .then(proxies => {
       console.log(proxies, "proxies from cellar");
       res.status(200).send(proxies);
