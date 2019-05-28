@@ -1,7 +1,7 @@
 exports.up = knex =>
   knex.schema.createTable("accounts", table => {
     table.increments("proxyServer_id");
-    table.integer("user_id").notNullable();
+    table.integer("user_id");
     table.string("lanIP").notNullable();
     table.string("vpnIP").notNullable();
     table.string("proxyIP").notNullable();
