@@ -18,7 +18,7 @@ app.get("/getAll/:id", (req, res) => {
   console.log(req.params, "hitting endpoint");
   db.retrieveUserProxies(req.params)
     .then(proxies => {
-      console.log(proxies, "proxies from cellar");
+      //console.log(proxies, "proxies from cellar");
       res.status(200).send(proxies);
     })
     .catch(err => {
